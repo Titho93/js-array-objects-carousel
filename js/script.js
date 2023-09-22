@@ -33,7 +33,14 @@ const images = [
 
 images.forEach( (photo) => {
   console.log(photo)
-  imageCont.innerHTML += `<img src="${photo.image}" class="item hide">`;
+  imageCont.innerHTML += `
+  <div class="diapositive item hide">
+  <img src="${photo.image}">
+  <div class="text">
+    <h5>${photo.title}</h5>
+    <p>${photo.text}</p>
+  </div>
+  </div>`;
   thumb.innerHTML += `<img src="${photo.image}" class="object">`;
 }) 
 
